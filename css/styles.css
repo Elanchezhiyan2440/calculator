@@ -1,9 +1,104 @@
+:root{
+    --body: #1D1C1C;
+    --primary: #313436;
+    --text : #fff;
+    --display: #404447;
+    --button-primary : #404447;
+    --button-secondary : #835353;
+    --box-shadow:  rgba(0, 0, 0, 0.25);
+    --h3:  rgba(255, 255, 255, 0.75);
+}
+
 /* Element styles */
 
 html{
     font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: var(--text);
+}
+
+body{
+    background-color: var(--body);
+}
+
+h1{
+    font-size: 1.5rem;
+    padding: 1rem 0 0.5rem 2rem;
+}
+h2{
+    font-size: 4rem;
+    padding: 0 2rem 2rem 2rem;
+}
+h3{
+    color: var(--h3);
+    font-size: 2rem;
+    padding: 0 2.5rem 1rem 0;
+}
+
+h2, h3{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    text-align: end;
+}
+
+button{
+    color: var(--text);
+    font-size: 2.5rem;
+    border: var(--box-shadow);
+    border-radius: 50%;
+    background-color: var(--button-primary);
+    width: 8rem;
+    height: 8rem;
+    box-shadow: 0 4px 4px var(--box-shadow);
+    transition-duration: 0.1s;
+}
+
+button:active{
+    box-shadow: 4px 4px rgba(0, 0, 0, 0);
+    transform: translateY(4px);
+}
+
+.mainFrame{
+    background-color: var(--primary);
+    height: 67rem;
+    width: 45rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 2rem;
+}
+
+.displayArea{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    height: 15rem;
+    background-color: var(--display);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.buttonsArea{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2.5rem 0.5rem;
+    padding: 2rem 1rem 2rem 1rem;
 }
 
 .buttonsRow{
     display: flex;
+}
+
+.clearButton{
+    background-color: var(--button-secondary);
+}
+
+.equalToButton{
+    width: 16rem;
+    grid-column: span 2;
+    border-radius: 5rem;
 }
