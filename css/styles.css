@@ -96,7 +96,7 @@ button:active{
     display: flex;
 }
 
-.clearButton{
+.clearAllButton, .clearOneButton{
     background-color: var(--button-secondary);
 }
 
