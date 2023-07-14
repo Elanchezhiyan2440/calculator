@@ -8,7 +8,7 @@ const currentCalculation = document.querySelector('h2');
 const firstOperandDisplay = document.querySelector('h3');
 
 
-currentCalculation.textContent = "0";
+currentCalculation.textContent = 0;
 firstOperandDisplay.textContent = "";
 
 const numButtons = [...document.querySelectorAll(`[data-numbers]`)];
@@ -51,7 +51,7 @@ function clearAll(){
     updateCurrentCalculation();
 };
 
-function resetString(){currentCalculation.textContent = ""};
+function resetString(){str = 0;}
 
 function displayFirstOperandOperator(){
     firstOperandDisplay.textContent = firstOperand + operator};
