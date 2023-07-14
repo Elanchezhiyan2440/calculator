@@ -8,7 +8,7 @@ const currentCalculation = document.querySelector('h2');
 const firstOperandDisplay = document.querySelector('h3');
 
 
-currentCalculation.textContent = 0;
+currentCalculation.textContent = "0";
 firstOperandDisplay.textContent = "";
 
 const numButtons = [...document.querySelectorAll(`[data-numbers]`)];
@@ -20,7 +20,8 @@ numButtons.forEach(appendToString);
 function appendToString(button){
     button.addEventListener('click', (event)=>{
         const clickedButton = event.target;
-        str = str + clickedButton.innerText;
+        num = Number(str + clickedButton.innerText);
+        str = num.toString();
         console.log(str);
         updateCurrentCalculation();
     })
@@ -51,7 +52,7 @@ function clearAll(){
     updateCurrentCalculation();
 };
 
-function resetString(){str = 0;}
+function resetString(){str = "0";}
 
 function displayFirstOperandOperator(){
     firstOperandDisplay.textContent = firstOperand + operator};
