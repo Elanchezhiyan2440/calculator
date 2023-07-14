@@ -1,18 +1,21 @@
+let operator = "";
+let firstOperand;
+let secondOperand;
+
+let str = "";
+
 const currentCalculation = document.querySelector('h2');
-const previousCalculation = document.querySelector('h3');
+const firstOperandDisplay = document.querySelector('h3');
 
 
 currentCalculation.textContent = "0";
-previousCalculation.textContent = "Test";
+firstOperandDisplay.textContent = "";
 
 const numButtons = [...document.querySelectorAll(`[data-numbers]`)];
 const operatorButtons = [...document.querySelectorAll(`[data-operators]`)];
 
-//update display
-let str = "";
-
 numButtons.forEach(appendToString);
-operatorButtons.forEach(appendToString);
+// operatorButtons.forEach(appendToString);
 
 function appendToString(button){
     button.addEventListener('click', (event)=>{
@@ -38,7 +41,32 @@ function clearOne(){
 
 const clearAllButton = document.getElementsByClassName('clearAllButton')[0];
 clearAllButton.addEventListener('click', clearAll);
+
+
 function clearAll(){
-     str = "";
-     updateCurrentCalculation();
+    resetString();
+    firstOperand = "";
+    operator = "";
+    displayFirstOperandOperator();
+    updateCurrentCalculation();
 };
+
+function resetString(){currentCalculation.textContent = ""};
+
+function displayFirstOperandOperator(){
+    firstOperandDisplay.textContent = firstOperand + operator};
+
+operatorButtons.forEach(updateFirstOperandAndOperator);
+
+function updateFirstOperandAndOperator(button){
+    button.addEventListener('click', (event)=>{
+        clickedButton = event.target;
+        operator = clickedButton.innerHTML;
+        if (str === ""){currentCalculation.textContent = "Error"}
+        else {firstOperand = str};
+        displayFirstOperandOperator();
+        resetString();
+        console.log(str);
+        console.log(firstOperand);
+        console.log(operator);
+})};
