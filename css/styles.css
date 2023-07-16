@@ -71,7 +71,7 @@ button:active{
 }
 
 .mainFrame{
-    background: url(/jin.svg);
+    background: url(../jin.svg);
     box-shadow: 4px 4px 4px var(--box-shadow);
     height: 67rem;
     width: 45rem;
