@@ -1,12 +1,12 @@
 :root{
-    --body: #1D1C1C;
-    --primary: #313436;
-    --text : #fff;
-    --display: #404447;
-    --button-primary : #404447;
-    --button-secondary : #835353;
+    --body: #3A4F7A;
+    --primary: #F2BED1;
+    --text : #363030;
+    --display: #F8E8EE;
+    --button-primary : #FDCEDF;
+    --button-secondary : #da65a7;
     --box-shadow:  rgba(0, 0, 0, 0.25);
-    --h3:  rgba(255, 255, 255, 0.75);
+    --h3:  #6f5c5c;
 }
 
 /* Element styles */
@@ -44,6 +44,8 @@ h2, h3{
 }
 
 p{
+    color: #fff;
+    font-weight: 100;
     text-align: end;
     font-family: 'Open sans',serif;
     letter-spacing: 5%;
@@ -69,7 +71,7 @@ button:active{
 }
 
 .mainFrame{
-    background-color: var(--primary);
+    background: url(/jin.svg);
     box-shadow: 4px 4px 4px var(--box-shadow);
     height: 67rem;
     width: 45rem;
@@ -105,7 +107,7 @@ button:active{
     display: flex;
 }
 
-.clearAllButton, .clearOneButton{
+.clearAllButton, .clearOneButton, .pinkButton{
     background-color: var(--button-secondary);
 }
 
